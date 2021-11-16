@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "ImageShare",
-    "slug": "ImageShare",
+    "name": "E-Books",
+    "slug": "E-Books",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "icon": "./assets/icon1.png",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -17,16 +17,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "cover"
+      },
+      "bundleIdentifier": "org.markup.exp"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "splash": {
+        "ldpi": "./assets/logo1.png",
+        "mdpi": "./assets/logo2.png",
+        "hdpi": "./assets/logo.png",
+        "xhdpi": "./assets/logo3.png",
+        "xxhdpi": "./assets/logo4.png",
+        "xxxhdpi": "./assets/logo5.png",
+        "resizeMode": "cover"
+      },
+      "package": "org.books.exp"
     }
   }
 }
