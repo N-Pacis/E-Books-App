@@ -2,6 +2,8 @@ import {createStackNavigator} from "@react-navigation/stack"
 import HomeComponent from "../components/HomeComponent"
 import BooksIntroductionComponent from "../components/BooksIntroductionComponent"
 import React from "react"
+import SignUpComponent from "../components/SignUpComponent"
+import LoginComponent from "../components/LoginComponent"
 
 const stack = createStackNavigator()
 
@@ -34,6 +36,34 @@ const MyStack = ()=>{
                 headerTitleStyle:{
                     fontWeight:'bold',
                     marginLeft:"35%"
+                }
+            }} 
+        />
+        <stack.Screen 
+            name="Register" 
+            component={SignUpComponent}
+            options={{
+                headerStyle:{
+                    backgroundColor:'#4153ab'
+                },
+                headerTintColor:'white',
+                headerTitleStyle:{
+                    fontWeight:'bold',
+                    marginLeft:"49%"
+                }
+            }} 
+        />
+        <stack.Screen 
+            name="Login" 
+            component={LoginComponent}
+            options={{
+                headerStyle:{
+                    backgroundColor:'#4153ab'
+                },
+                headerTintColor:'white',
+                headerTitleStyle:{
+                    fontWeight:'bold',
+                    marginLeft:"54%"
                 }
             }} 
         />

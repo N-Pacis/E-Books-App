@@ -2,17 +2,14 @@ import React,{useRef} from 'react';
 import { StyleSheet, Text,TextInput, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function SignUpComponent({navigation}) {
-    const goToLogin = ()=>{
-        navigation.push(("Login"))
+export default function LoginComponent({navigation}) {
+    const goToSignUp = ()=>{
+        navigation.push("Register")
     }
+
     return (
     <View style={styles.container}>
-        <Text style={styles.createAccountText}>Create&nbsp;an account</Text>
-        <View>
-            <Text style={styles.inputLabel}>Username</Text>
-            <TextInput style={styles.input}/>  
-        </View>
+        <Text style={styles.loginText}>Welcome Back</Text>
         <View>
             <Text style={styles.inputLabel}>Email</Text>
             <TextInput style={styles.input}/>  
@@ -22,10 +19,10 @@ export default function SignUpComponent({navigation}) {
             <TextInput style={styles.input}/>  
         </View>
         <TouchableOpacity style={styles.signUpBtn}>
-          <Text style={styles.signUpText}>Sign Up</Text>
+          <Text style={styles.signUpText}>Login</Text>
         </TouchableOpacity>
         <Text style={styles.alreadyHaveAccount}>
-            Already have an account?<Text style={styles.signInText} onPress={goToLogin}> Sign in</Text>
+            Don't have an account?<Text style={styles.signInText} onPress={goToSignUp}> Sign up</Text>
         </Text>
     </View>
   );
@@ -36,9 +33,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         paddingHorizontal:26,
-        paddingTop: 50
+        paddingTop: 120
     },
-    createAccountText:{
+    loginText:{
         fontFamily:"sans-serif",
         fontWeight:"bold",
         fontSize:29,

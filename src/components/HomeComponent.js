@@ -7,13 +7,17 @@ export default function HomeComponent({navigation}) {
       navigation.push("Explore Books")
   }
 
+  const goToSignUp = ()=>{
+      navigation.push("Register")
+  }
+
   return (
     <View style={styles.container}>
         <Image source={homeImage} style={styles.homeImage}/>
         <Text style={styles.homeText}>Create a personal account</Text>  
         <Text style={styles.homeParagraph}>Join over 2000+ accounts publishing books worldwide. Together we can spread the culture of reading as a primary source of information.</Text>
         <View style={styles.buttonContainer}>
-            <Text style={styles.skipPage}>Skip</Text>
+            <Text style={styles.skipPage} onPress={goToSignUp}>Skip</Text>
             <Text style={styles.nextPage} onPress={goToNextPage}>Next</Text>
         </View>
     </View>

@@ -3,13 +3,17 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import booksmage from '../../assets/Bibliophile-bro.png'
 
-export default function BooksIntroductionComponent() {
+export default function BooksIntroductionComponent({navigation}) {
+  const goToSignUp = () => {
+      navigation.push("Register")
+  }
+
   return (
     <View style={styles.container}>
         <Image source={booksmage} style={styles.homeImage}/>
         <Text style={styles.homeText}>Explore free books</Text>  
         <Text style={styles.homeParagraph}>Read over 3500+ books published here. We provide various categories including science fiction, adventure, horror and kids novels.</Text>
-        <TouchableOpacity style={styles.getStartedBtn}>
+        <TouchableOpacity style={styles.getStartedBtn} onPress={goToSignUp}>
           <Text style={styles.getStartedText}>Get Started</Text>
         </TouchableOpacity>
     </View>
