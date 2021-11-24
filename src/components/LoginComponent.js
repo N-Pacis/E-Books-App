@@ -6,6 +6,9 @@ export default function LoginComponent({navigation}) {
     const goToSignUp = ()=>{
         navigation.push("Register")
     }
+    const goToExplore = ()=>{
+        navigation.push("Explore")
+    }
 
     return (
     <View style={styles.container}>
@@ -18,7 +21,7 @@ export default function LoginComponent({navigation}) {
             <Text style={styles.inputLabel}>Password</Text>
             <TextInput style={styles.input}/>  
         </View>
-        <TouchableOpacity style={styles.signUpBtn}>
+        <TouchableOpacity style={styles.signUpBtn} onPress={goToExplore}>
           <Text style={styles.signUpText}>Login</Text>
         </TouchableOpacity>
         <Text style={styles.alreadyHaveAccount}>
