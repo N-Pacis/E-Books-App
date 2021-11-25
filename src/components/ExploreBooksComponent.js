@@ -88,9 +88,11 @@ const Book = ({ cover,title,author }) => (
 const ReadingBook = ({ cover,title,author,progress }) => (
   <View style={styles.ReadingBookItem}>
     <Image source={{ uri: cover }} style={styles.ReadingBookItem__image}/>
-    <Text style={styles.ReadingBookItem__title}>{title}</Text>
-    <Text style={styles.ReadingBookItem__author}>{author}</Text>
-    <Progress.Bar progress={progress} width={170} height={7} borderRadius={5} borderColor={'transparent'} unfilledColor={'#e8eaed'} />
+    <View style={styles.bookDescription}>
+      <Text style={styles.ReadingBookItem__title}>{title}</Text>
+      <Text style={styles.ReadingBookItem__author}>{author}</Text>
+      <Progress.Bar progress={progress} width={130} height={5} borderRadius={5} borderColor={'transparent'} unfilledColor={'#e8eaed'} />
+    </View>
   </View>
 );
 
@@ -123,6 +125,7 @@ const styles = StyleSheet.create({
     borderRadius:5,
     marginVertical:5,
     height:280,
+    flex:2
   },
   bookItem__image: {
     width:'100%',
@@ -157,35 +160,50 @@ const styles = StyleSheet.create({
   },
   ReadingBookItem: {
     marginHorizontal:10,
-    width:175,
-    borderRadius:5,
+    width:360,
+    paddingRight:17,
+    borderRadius:7,
+    flex:1,
+    flexDirection:'row',
+    marginRight:15,
     marginVertical:5,
-    height:280,
+    height:210,
+    shadowColor: '#dedfe0',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 7,  
+    elevation: 1
   },
   ReadingBookItem__image: {
-    width:'100%',
+    width:'60%',
+    marginRight:10,
     borderRadius:5,
-    height:'80%'
+    height:'99%',
+    marginTop:2
   },
   ReadingBookItem__title:{
     marginTop:3,
-    fontSize:18,
+    fontSize:20,
     fontFamily:'sans-serif',
     opacity:0.9,
-    marginLeft:3,
+    marginLeft:1,
     fontFamily:'sans-serif',
     fontWeight:"bold",
     color:'#161717',
     marginBottom:2
   },
   ReadingBookItem__author:{
-    fontSize:15,
+    fontSize:16,
     marginLeft:3,
     fontFamily:'sans-serif',
     fontWeight:"bold",
     opacity:0.8,
     color:'#9a9c9c',
     marginBottom:10
+  },
+  bookDescription:{
+    width:'40%',
+    marginTop:50
   }
 });
 
