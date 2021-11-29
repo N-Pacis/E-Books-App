@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar,Image } from 'react-native';
 import * as Progress from 'react-native-progress';
+import Header from './ExploreHeaderComponent';
 
 const Books = [
   {
@@ -103,6 +104,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar hidden/>
+      <Header></Header>
       <FlatList style={styles.Books}data={Books} horizontal renderItem={renderBooks} keyExtractor={item => item.id} />
       <Text style={styles.continueReading}>Continue Reading</Text>
       <FlatList data={ContinueReading} horizontal renderItem={renderReadingBooks} keyExtractor={item=>item.id}/>
@@ -114,6 +116,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal:5,
+    backgroundColor:'#fff',
     marginTop: StatusBar.currentHeight || 0
   },
   Books:{

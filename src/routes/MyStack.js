@@ -72,14 +72,7 @@ const MyStack = ()=>{
             name="Explore" 
             component={ExploreBooksComponent}
             options={{
-                headerStyle:{
-                    backgroundColor:'#4153ab'
-                },
-                headerTintColor:'white',
-                headerTitleStyle:{
-                    fontWeight:'bold',
-                    marginLeft:"51%"
-                }
+                headerShown: false
             }} 
         />
     </stack.Navigator>
